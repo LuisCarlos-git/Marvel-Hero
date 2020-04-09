@@ -1,33 +1,40 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useHistory } from 'react-router-dom';
 
 import { useSelector } from 'react-redux';
 
-import { Container, Card, CardList } from './styles';
+import { Container } from './styles';
 import Header from '../../components/Header';
 
 export default function Dashboard() {
   const list = useSelector((state) => state.list);
+  const history = useHistory();
+
+  function handleDetails(id) {
+    history.push(`/details/${id}`);
+  }
 
   return (
     <Container>
       <Header />
-      <CardList>
+      <div>
         <ul>
           {list.map((l) => (
-            <Card key={String(l.id)}>
-              <li>
-                <img
-                  src={`${l.thumbnail.path}.${l.thumbnail.extension}`}
-                  alt={l.name}
-                />
+            <li key={String(l.id)}>
+              <img
+                src={`${l.thumbnail.path}.${l.thumbnail.extension}`}
+                alt={l.name}
+              />
+              <span>{l.name}</span>
 
-                <span>{l.name}</span>
-              </li>
-            </Card>
+              <button type="button" onClick={() => handleDetails(l.id)}>
+                Details
+              </button>
+            </li>
           ))}
         </ul>
-      </CardList>
+      </div>
     </Container>
   );
 }

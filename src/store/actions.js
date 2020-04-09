@@ -4,3 +4,9 @@ export function add(data) {
     payload: { data },
   };
 }
+export function details(id) {
+  return {
+    type: '@hero/DETAILS_HERO',
+    payload: { id },
+  };
+}

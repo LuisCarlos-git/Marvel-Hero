@@ -1,10 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
-
-import 'react-toastify/dist/ReactToastify.css';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
 export default createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
 
   * {
     margin: 0;
@@ -21,13 +18,13 @@ export default createGlobalStyle`
     -webkit-font-smoothing: antialiased !important
   }
 
-  body, input, button {
-    font-family: 'Luckiest Guy', cursive;
+  body, input, button {  
     font-weight: bold;
   }
 
   html,body, #root {
     height: 100%;
+    background: rgb(92, 3, 3);
   }
 
   a {
