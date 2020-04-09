@@ -33,7 +33,7 @@ export default function Details() {
 
         <Comics>
           {hero.comics.items.map((comic) => (
-            <ul>
+            <ul key={comic.name}>
               <li>{comic.name}</li>
             </ul>
           ))}
