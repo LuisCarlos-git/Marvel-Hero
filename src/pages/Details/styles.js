@@ -4,6 +4,11 @@ import PerfectScrollbar from 'react-perfect-scrollbar';
 export const Container = styled.div`
   width: 100%;
   min-height: calc(100% - 75px);
+  nav {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
 `;
 export const DetailsHero = styled.div`
   display: flex;

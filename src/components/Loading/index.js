@@ -6,7 +6,7 @@ export default function Loading() {
   return (
     <Container>
       <div>
-        <FaSpinner size={50} color="#FFF" />
+        <FaSpinner size={50} color="red" />
       </div>
     </Container>
   );

@@ -21,8 +21,8 @@ export default function Search({ history }) {
     setLoading(true);
     e.preventDefault();
     const ts = new Date().getTime();
-    const apikey = ;
-    const private_key = ;
+    const apikey = '7ed4cfcab3bbda139bf880d953064dac';
+    const private_key = 'bfb714506aaf5a1a4f080b3ddb81c413c841385e';
     const hash = md5(`${ts}${private_key}${apikey}`);
 
     const response = await api.get('characters', {

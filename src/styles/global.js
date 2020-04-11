@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components';
 import 'react-perfect-scrollbar/dist/css/styles.css';
 
+import fundo from '../assets/fundo.jpg';
+
 export default createGlobalStyle`
 
   * {
@@ -24,8 +26,12 @@ export default createGlobalStyle`
 
   html,body, #root {
     height: 100%;
-    background: rgb(92, 3, 3);
+    background: #000 url(${fundo});
+    background-repeat: no-repeat;    
+    background-size: cover;
+    
   }
+  
 
   a {
     text-decoration: none;

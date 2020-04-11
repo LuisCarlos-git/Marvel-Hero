@@ -10,36 +10,48 @@ export const Container = styled.div`
     align-items: center;
 
     ul {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      grid-gap: 15px;
-      width: 100%;
+      display: flex;
+      flex-direction: column;
+      width: 70%;
       margin: 50px 50px;
+      background: rgba(255, 255, 255, 0.8);
+      border-radius: 5px;
 
       li {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         padding: 10px;
+        margin: 15px 15px;
+        border: 1px dashed #eee;
 
-        background: #fff;
         border-radius: 5px;
-        img {
-          width: calc(100% - 30px);
-          height: 200px;
-          border-radius: 5px;
-        }
 
-        span {
-          font-size: 15px;
-          color: #555;
-          margin-bottom: 15px;
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-self: center;
+          img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-right: 10px;
+            background: #eee;
+          }
+
+          span {
+            padding: 0 10px;
+            font-size: 20px;
+            color: #333;
+          }
         }
 
         button {
           border: 0;
           background: #f00;
-          width: 100%;
+          width: 20%;
           height: 40px;
           color: #fff;
           font-size: 17px;
@@ -47,7 +59,6 @@ export const Container = styled.div`
           transition: background 0.2s;
           letter-spacing: 4px;
           overflow: hidden;
-          margin-top: auto;
 
           &:hover {
             background: ${darken(0.1, '#f00')};

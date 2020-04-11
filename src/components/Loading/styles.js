@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import fundo from '../../assets/fundo.jpg';
 
 const rotate = keyframes`
   from{
@@ -13,18 +14,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   height: 100%;
-  background: rgb(92, 3, 3);
-  background: linear-gradient(
-    circle,
-    rgba(92, 3, 3, 1) 0%,
-    rgba(149, 0, 0, 1) 42%,
-    rgba(148, 4, 4, 1) 54%,
-    rgba(145, 6, 6, 1) 68%,
-    rgba(142, 8, 8, 1) 74%,
-    rgba(120, 5, 5, 1) 86%,
-    rgba(84, 1, 1, 1) 100%,
-    rgba(48, 1, 21, 1) 100%
-  );
+  height: 100%;
+  background: #000 url(${fundo});
+  background-repeat: no-repeat;
+  background-size: cover;
 
   div {
     svg {

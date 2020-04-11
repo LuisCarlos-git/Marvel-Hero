@@ -16,26 +16,29 @@ export default function Dashboard() {
   }
 
   return (
-    <Container>
+    <>
       <Header />
-      <div>
-        <ul>
-          {list.map((l) => (
-            <li key={String(l.id)}>
-              <img
-                src={`${l.thumbnail.path}.${l.thumbnail.extension}`}
-                alt={l.name}
-              />
-              <span>{l.name}</span>
-
-              <button type="button" onClick={() => handleDetails(l.id)}>
-                Details
-              </button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </Container>
+      <Container>
+        <div>
+          <ul>
+            {list.map((l) => (
+              <li key={String(l.id)}>
+                <div>
+                  <img
+                    src={`${l.thumbnail.path}.${l.thumbnail.extension}`}
+                    alt={l.name}
+                  />
+                  <span>{l.name}</span>
+                </div>
+                <button type="button" onClick={() => handleDetails(l.id)}>
+                  Details
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </Container>
+    </>
   );
 }
 
